@@ -1,14 +1,18 @@
+import static org.testng.Assert.assertEquals;
+
 import org.testng.annotations.Test;
 
-import garage.com.Car;
-
 public class CarTests {
-	
-  @Test
-  public void canBuildCar() {
-	  String model = "Corvette";
-	  Car myCar = new Car(model);
-	  
-	  myCar.startEngine();	  
-  }
+
+	@Test
+	public void canBuildCar() {
+		boolean expectedStartedStatus = true;
+		String model = "Corvette";
+		Car myCar = new Car(model);
+
+		myCar.start();
+		boolean isStarted = myCar.getIsStarted();
+
+		assertEquals(isStarted, expectedStartedStatus);
+	}
 }

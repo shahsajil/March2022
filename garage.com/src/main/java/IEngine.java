@@ -1,5 +1,3 @@
-package garage.com;
-
 public interface IEngine {
-
+	void start();
 }
