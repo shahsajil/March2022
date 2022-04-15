@@ -16,7 +16,7 @@ public class JavaBasics {
 
 	@Test
 	public void comparesValueTypesUsingIsEqualToOperator() {
-		
+
 		boolean isContentTheSame = ONE == TWO;
 
 		assertFalse(isContentTheSame, "content of variables should not be equal.");
@@ -24,7 +24,7 @@ public class JavaBasics {
 
 	@Test
 	public void comparesReferenceTypesUsingIsEqualToOperator() {
-		
+
 		String one = new String("Louis Johnson");
 		String two = new String("Louis Johnson");
 
@@ -35,7 +35,7 @@ public class JavaBasics {
 
 	@Test
 	public void comparesReferenceTypesUsingEqualsMethod() {
-		
+
 		String one = new String("Nathan East");
 		String two = new String("Nathan East");
 
@@ -70,7 +70,7 @@ public class JavaBasics {
 
 	@Test
 	public void numbersArePostIncrementedUsingUnaryOperator() {
-		
+
 		int one = 1;
 		int expectedValue = 1;
 
@@ -81,7 +81,7 @@ public class JavaBasics {
 
 	@Test
 	public void numbersArePreDecrementedUsingUnaryOperator() {
-		
+
 		int one = 1;
 		int expectedValue = 0;
 
@@ -92,7 +92,7 @@ public class JavaBasics {
 
 	@Test
 	public void booleanCanBeInversedUsingExclaimationOperator() {
-		
+
 		boolean isTrue = true;
 
 		boolean result = !isTrue;
@@ -102,7 +102,7 @@ public class JavaBasics {
 
 	@Test
 	public void canUseMultipleIfStatements() {
-		
+
 		boolean isTrue = true;
 		boolean isFalse = false;
 		boolean didFirstDecisionExecute = false;
@@ -121,7 +121,7 @@ public class JavaBasics {
 
 	@Test
 	public void canUseIfElseStatements() {
-		
+
 		boolean didFirstDecisionExecute = false;
 		boolean didSecondDecisionExecute = false;
 
@@ -138,7 +138,7 @@ public class JavaBasics {
 
 	@Test
 	public void canUseNestedForLoop() {
-		
+
 		int loopCounter = 0;
 		int loopLimit = 10;
 		int nestedLoopCounter = 0;
@@ -161,7 +161,7 @@ public class JavaBasics {
 
 	@Test
 	public void canCatchException() {
-		
+
 		boolean doesThrowException = false;
 
 		try {
@@ -176,7 +176,7 @@ public class JavaBasics {
 
 	@Test
 	public void canIterateThroughCollectionUsingForEach() {
-		
+
 		List<String> airplanesInHangar = new ArrayList<String>();
 		List<String> airplanes = new ArrayList<String>();
 		airplanes.add("Cessna");
