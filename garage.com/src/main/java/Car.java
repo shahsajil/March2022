@@ -1,20 +1,11 @@
-public class Car {
+public class Car extends MotorizedVehicle {
 	private int odometer;
-	private LargeEngine engine;
 
-	public Car(String model) {
-		this.engine = new LargeEngine();
+	public Car(String model, IEngine engine, IIgnition ignitionSystem) {
+		super(model, engine, ignitionSystem);
 	}
-
-	public void start() {
-		this.engine.start();
-	}
-
+	
 	public int getOdometer() {
 		return odometer;
-	}
-
-	public boolean getIsStarted() {
-		return this.engine.getIsStarted();
 	}
 }

@@ -1,18 +1,35 @@
 import static org.testng.Assert.assertEquals;
-
+import static org.testng.Assert.assertTrue;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class CarTests {
+	private Car Car;
+
+	@BeforeClass
+	public void setup() {
+		String model = "Corvette";
+		LargeEngine engine = new LargeEngine();
+		ElectronicIgnition ignitionSystem = new ElectronicIgnition();
+
+		this.Car = new ConvertibleCar(model, engine, ignitionSystem);
+	}
 
 	@Test
 	public void canBuildCar() {
-		boolean expectedStartedStatus = true;
-		String model = "Corvette";
-		Car myCar = new Car(model);
+		Car car = this.Car;
 
-		myCar.start();
-		boolean isStarted = myCar.getIsStarted();
+		String actualModel = car.getModel();
 
-		assertEquals(isStarted, expectedStartedStatus);
+		assertEquals(actualModel, Car.getModel() , "");
+	}
+
+	@Test
+	public void canStartCar() {
+		Car car = this.Car;
+
+		boolean isStarted = car.getIsStarted();
+
+		assertTrue(isStarted, "");
 	}
 }
