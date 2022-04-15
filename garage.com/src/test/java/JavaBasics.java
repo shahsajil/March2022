@@ -25,19 +25,19 @@ public class JavaBasics {
 	@Test
 	public void comparesReferenceTypesUsingIsEqualToOperator() {
 		
-		String one = new String("1");
-		String two = new String("1");
+		String one = new String("Louis Johnson");
+		String two = new String("Louis Johnson");
 
 		boolean doesPointToSameLocationInMemory = one == two;
 
-		assertFalse(doesPointToSameLocationInMemory, "address of variables should not be the same.");
+		assertFalse(doesPointToSameLocationInMemory, "memory location of variables should not be the same.");
 	}
 
 	@Test
 	public void comparesReferenceTypesUsingEqualsMethod() {
 		
-		String one = new String("1");
-		String two = new String("1");
+		String one = new String("Nathan East");
+		String two = new String("Nathan East");
 
 		boolean doesHaveEqualValues = one.equals(two);
 
@@ -94,11 +94,10 @@ public class JavaBasics {
 	public void booleanCanBeInversedUsingExclaimationOperator() {
 		
 		boolean isTrue = true;
-		boolean expectedValue = false;
 
 		boolean result = !isTrue;
 
-		assertEquals(result, expectedValue, "the boolean should be inversed.");
+		assertEquals(result, FALSE, "the boolean should be inversed.");
 	}
 
 	@Test
@@ -123,11 +122,10 @@ public class JavaBasics {
 	@Test
 	public void canUseIfElseStatements() {
 		
-		boolean isFalse = false;
 		boolean didFirstDecisionExecute = false;
 		boolean didSecondDecisionExecute = false;
 
-		if(isFalse) {
+		if(FALSE) {
 			didFirstDecisionExecute = true;
 		}
 		else {
