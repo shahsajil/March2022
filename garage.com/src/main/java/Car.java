@@ -4,7 +4,7 @@ public class Car extends MotorizedVehicle {
 	public Car(String model, IEngine engine, IIgnition ignitionSystem) {
 		super(model, engine, ignitionSystem);
 	}
-	
+
 	public int getOdometer() {
 		return odometer;
 	}

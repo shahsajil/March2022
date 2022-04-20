@@ -3,7 +3,7 @@ public abstract class EngineBase implements IEngine {
 	private boolean isStarted;
 
 	public void start() {
-		this.isStarted = true;
+		this.isStarted = true;		
 	}
 
 	public boolean getIsStarted() {

@@ -8,11 +8,12 @@ public class CarTests {
 
 	@BeforeClass
 	public void setup() {
+
 		String model = "Corvette";
 		LargeEngine engine = new LargeEngine();
 		ElectronicIgnition ignitionSystem = new ElectronicIgnition();
 
-		this.Car = new ConvertibleCar(model, engine, ignitionSystem);
+		this.Car = new Car(model, engine, ignitionSystem);
 	}
 
 	@Test
@@ -21,15 +22,16 @@ public class CarTests {
 
 		String actualModel = car.getModel();
 
-		assertEquals(actualModel, Car.getModel() , "");
+		assertEquals(actualModel, Car.getModel() , "The car model is Corvette.");
 	}
 
 	@Test
 	public void canStartCar() {
 		Car car = this.Car;
 
+		car.start();
 		boolean isStarted = car.getIsStarted();
 
-		assertTrue(isStarted, "");
+		assertTrue(isStarted, "The car should start");
 	}
 }
